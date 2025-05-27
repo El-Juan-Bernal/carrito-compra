@@ -27,14 +27,14 @@ public class CarritoModel {
     @Column(name = "valor_total")
     private double valorTotal;
     
-    // Método para agregar producto
+    // agregar producto
     public void agregarProducto(int cantidad, double valor) {
         this.cantidadProductos += cantidad;
         this.valorProducto += valor;
         calcularValorTotal();
     }
     
-    // Método para eliminar producto
+    // eliminar producto
     public void eliminarProducto(int cantidad, double valor) {
         if (this.cantidadProductos >= cantidad && this.valorProducto >= valor) {
             this.cantidadProductos -= cantidad;
@@ -43,14 +43,14 @@ public class CarritoModel {
         }
     }
     
-    // Método para vaciar carrito
+    // vaciar carrito
     public void vaciarCarrito() {
         this.cantidadProductos = 0;
         this.valorProducto = 0.0;
         this.valorTotal = 0.0;
     }
     
-    // Método para calcular valor total
+    // calcular valor total
     public void calcularValorTotal() {
         this.valorTotal = this.valorProducto;
     }
