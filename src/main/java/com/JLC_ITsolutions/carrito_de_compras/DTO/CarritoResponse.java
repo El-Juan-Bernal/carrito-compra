@@ -14,5 +14,4 @@ private int idCompra;
     private int cantidadProductos;
     private double valorProducto;
     private double valorTotal;
-    123
 }
